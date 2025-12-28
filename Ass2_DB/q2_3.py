@@ -23,14 +23,8 @@ if __name__ == '__main__':
             size_id INT,
 
             PRIMARY KEY (shoe_id, size_id),
-
-            CONSTRAINT fk_shoe_link
-                FOREIGN KEY (shoe_id) 
-                REFERENCES shoe(shoe_id),
-
-            CONSTRAINT fk_size_link
-                FOREIGN KEY (size_id) 
-                REFERENCES size(size_id)
+            FOREIGN KEY (shoe_id) REFERENCES shoe(shoe_id),
+            FOREIGN KEY (size_id) REFERENCES size(size_id)
         )
     """)
 
