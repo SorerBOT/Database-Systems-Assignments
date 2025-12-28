@@ -6,7 +6,7 @@ if __name__ == '__main__':
         host="localhost",
         user="root",
         password="root",
-        database="mysql",
+        database="mysql", # when creating a db, we specify database="mysql"
         port='3307',
     )
 
