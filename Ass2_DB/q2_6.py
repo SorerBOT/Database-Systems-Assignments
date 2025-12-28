@@ -23,7 +23,7 @@ if __name__ == '__main__':
             city_name VARCHAR(63) NOT NULL,
             country_id INT NOT NULL,
 
-            FOREIGN KEY(country_id) country(country_id)
+            FOREIGN KEY(country_id) REFERENCES country(country_id)
 
         )
     """)
