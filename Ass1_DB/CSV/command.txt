@@ -1,0 +1,43 @@
+1.
+CREATE TABLE f1_data.fastest_laps_updated(
+    `Grand Prix` TEXT,
+    Driver TEXT,
+    Car TEXT,
+    Time TEXT,
+    year BIGINT,
+    Code TEXT
+);
+LOAD DATA LOCAL INFILE '/Assignment_1/CSV/fastest_laps_updated.csv' INTO TABLE f1_data.fastest_laps_updated CHARACTER SET UTF8 FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\r\n' IGNORE 1 LINES;
+
+2.
+CREATE TABLE f1_data.drivers_updated(
+    Pos BIGINT,
+    Driver TEXT,
+    Nationality TEXT,
+    Car TEXT,
+    PTS DOUBLE,
+    year BIGINT,
+    Code TEXT
+);
+LOAD DATA LOCAL INFILE '/Assignment_1/CSV/drivers_updated.csv' INTO TABLE f1_data.drivers_updated CHARACTER SET UTF8 FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\r\n' IGNORE 1 LINES;
+
+3.
+CREATE TABLE f1_data.teams_updated(
+    Pos BIGINT,
+    Car TEXT,
+    PTS DOUBLE,
+    year BIGINT
+);
+LOAD DATA LOCAL INFILE '/Assignment_1/CSV/teams_updated.csv' INTO TABLE f1_data.teams_updated CHARACTER SET UTF8 FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\r\n' IGNORE 1 LINES;
+
+4.
+CREATE TABLE f1_data.winners(
+    `Grand Prix` TEXT,
+    Date DATE,
+    Winner TEXT,
+    Car TEXT,
+    Laps DOUBLE,
+    Time TEXT,
+    `Name Code` TEXT
+);
+LOAD DATA LOCAL INFILE '/Assignment_1/CSV/winners.csv' INTO TABLE f1_data.winners CHARACTER SET UTF8 FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\r\n' IGNORE 1 LINES;
