@@ -16,7 +16,7 @@ if __name__ == '__main__':
     ## Execute the SQL query
     cursor.execute("""
             CREATE TABLE IF NOT EXISTS shoe (
-                shoe_id INT AUTO_INCREMENT PRIMARY KEY,
+                shoe_id INT PRIMARY KEY,
                 shoe_name VARCHAR(31) NOT NULL,
                 price SMALLINT NOT NULL
                 )
