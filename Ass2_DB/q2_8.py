@@ -21,7 +21,7 @@ if __name__ == '__main__':
         CREATE TABLE IF NOT EXISTS company_order (
             order_id INT PRIMARY KEY,
             order_date DATETIME NOT NULL
-        )
+        );
     """)
 
     ## !!!Commit the transaction to save the changes to the database!!!

@@ -27,7 +27,7 @@ if __name__ == '__main__':
 
             CHECK (LENGTH(customer_id) = 9),
             FOREIGN KEY(city_id) REFERENCES city(city_id)
-        )
+        );
     """)
 
     ## !!!Commit the transaction to save the changes to the database!!!

@@ -14,8 +14,6 @@ if __name__ == '__main__':
     cursor = mydb.cursor()
 
     ## Execute the SQL query
-    # (shoe_id, size_id) combinations are unique
-    # shoe_id and size_id are foreign keys
 
     cursor.execute("""
             INSERT INTO order_shoe (order_id, shoe_id)
@@ -29,7 +27,7 @@ if __name__ == '__main__':
                 (6, 7),
                 (7, 8),
                 (8, 9),
-                (9, 10)
+                (9, 10);
     """) 
     ## !!!Commit the transaction to save the changes to the database!!!
     mydb.commit()

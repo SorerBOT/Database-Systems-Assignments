@@ -16,13 +16,13 @@ if __name__ == '__main__':
     ## Execute the SQL query
 
     cursor.execute("""
-        SELECT DISTINCT shoe.shoe_name as name
+        SELECT DISTINCT shoe.shoe_name
         FROM shoe
         LEFT JOIN order_shoe ON shoe.shoe_id = order_shoe.shoe_id
         WHERE order_shoe.order_id IS NULL;
     """)
 
-    print (', '. join (str( row ) for row in cursor . fetchall ()))
+    print (', '. join (str( row ) for row in cursor.fetchall()))
 
     ## Close the cursor and the connection
     cursor.close()

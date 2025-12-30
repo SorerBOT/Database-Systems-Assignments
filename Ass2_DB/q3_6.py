@@ -14,8 +14,6 @@ if __name__ == '__main__':
     cursor = mydb.cursor()
 
     ## Execute the SQL query
-    # (shoe_id, size_id) combinations are unique
-    # shoe_id and size_id are foreign keys
 
     cursor.execute("""
             INSERT INTO city (city_id, city_name, country_id)
@@ -51,7 +49,7 @@ if __name__ == '__main__':
                 (29, 'Seville', 9),
                 (30, 'Rio de Janeiro', 10),
                 (31, 'São Paulo', 10),
-                (32, 'Brasilia', 10)
+                (32, 'Brasilia', 10);
     """)
 
     ## !!!Commit the transaction to save the changes to the database!!!

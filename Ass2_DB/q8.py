@@ -16,14 +16,15 @@ if __name__ == '__main__':
     ## Execute the SQL query
 
     cursor.execute("""
-        SELECT size.european_number, us_number, AVG(shoe.price) FROM size
+        SELECT size.european_number, us_number, AVG(shoe.price) AS average_price
+        FROM size
         JOIN shoe_size ON size.size_id = shoe_size.size_id
         JOIN shoe ON shoe.shoe_id = shoe_size.shoe_id
         GROUP BY size.size_id
-        ORDER BY AVG(shoe.price) DESC;
+        ORDER BY average_price DESC;
     """) 
 
-    print (', '. join (str( row ) for row in cursor . fetchall ()))
+    print (', '. join (str( row ) for row in cursor.fetchall ()))
 
     ## Close the cursor and the connection
     cursor.close()

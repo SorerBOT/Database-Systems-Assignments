@@ -16,7 +16,8 @@ if __name__ == '__main__':
     ## Execute the SQL query
 
     cursor.execute("""
-        SELECT shoe.shoe_name, COUNT(shoe_size.shoe_id) FROM shoe
+        SELECT shoe.shoe_name, COUNT(shoe_size.shoe_id) AS amount_sizes_available
+        FROM shoe
         LEFT JOIN shoe_size on shoe.shoe_id = shoe_size.shoe_id
         GROUP BY shoe.shoe_id;
     """)

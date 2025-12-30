@@ -14,8 +14,6 @@ if __name__ == '__main__':
     cursor = mydb.cursor()
 
     ## Execute the SQL query
-    # (shoe_id, size_id) combinations are unique
-    # shoe_id and size_id are foreign keys
 
     cursor.execute("""
             INSERT INTO company_order (order_id, order_date)
@@ -34,7 +32,7 @@ if __name__ == '__main__':
                 (12, '2025-12-10 14:45:00'),
                 (13, '2025-02-18 10:00:00'),
                 (14, '2025-03-20 08:15:00'),
-                (15, '2025-04-22 16:30:00')
+                (15, '2025-04-22 16:30:00');
     """) 
     ## !!!Commit the transaction to save the changes to the database!!!
     mydb.commit()

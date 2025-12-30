@@ -25,7 +25,7 @@ if __name__ == '__main__':
             PRIMARY KEY (shoe_id, size_id),
             FOREIGN KEY (shoe_id) REFERENCES shoe(shoe_id),
             FOREIGN KEY (size_id) REFERENCES size(size_id)
-        )
+        );
     """)
 
     ## !!!Commit the transaction to save the changes to the database!!!

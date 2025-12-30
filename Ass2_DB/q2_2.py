@@ -20,7 +20,7 @@ if __name__ == '__main__':
                 size_id INT PRIMARY KEY,
                 european_number TINYINT NOT NULL,
                 us_number TINYINT
-                )
+                );
     """)
 
     ## !!!Commit the transaction to save the changes to the database!!!

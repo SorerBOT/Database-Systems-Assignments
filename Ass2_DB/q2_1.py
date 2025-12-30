@@ -19,7 +19,7 @@ if __name__ == '__main__':
                 shoe_id INT PRIMARY KEY,
                 shoe_name VARCHAR(31) NOT NULL,
                 price SMALLINT NOT NULL
-                )
+                );
     """)
 
     ## !!!Commit the transaction to save the changes to the database!!!

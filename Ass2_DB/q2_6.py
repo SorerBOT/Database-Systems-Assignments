@@ -24,8 +24,7 @@ if __name__ == '__main__':
             country_id INT NOT NULL,
 
             FOREIGN KEY(country_id) REFERENCES country(country_id)
-
-        )
+        );
     """)
 
     ## !!!Commit the transaction to save the changes to the database!!!

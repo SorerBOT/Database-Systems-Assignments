@@ -14,8 +14,6 @@ if __name__ == '__main__':
     cursor = mydb.cursor()
 
     ## Execute the SQL query
-    # (shoe_id, size_id) combinations are unique
-    # shoe_id and size_id are foreign keys
 
     cursor.execute("""
             INSERT INTO upcoming (special_id, shoe_id, collection_name, release_date)
@@ -31,7 +29,7 @@ if __name__ == '__main__':
                 (9, 9, 'Quantum Special Edition', '2025-11-05 18:00:00'),
                 (10, 9, 'Winter Starlight Pack', '2025-12-20 20:00:00'),
                 (11, 10, 'Echo Runner Series', '2025-01-18 09:00:00'),
-                (12, 10, 'Trail Explorer Edition', '2025-07-25 17:00:00')
+                (12, 10, 'Trail Explorer Edition', '2025-07-25 17:00:00');
     """)
 
     ## !!!Commit the transaction to save the changes to the database!!!

@@ -19,7 +19,7 @@ if __name__ == '__main__':
         SELECT * FROM total_sales_per_shoe;
     """)
 
-    print (', '. join (str( row ) for row in cursor . fetchall ()))
+    print (', '. join (str( row ) for row in cursor.fetchall ()))
 
     ## Close the cursor and the connection
     cursor.close()

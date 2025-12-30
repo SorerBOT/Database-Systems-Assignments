@@ -21,7 +21,7 @@ if __name__ == '__main__':
         CREATE TABLE IF NOT EXISTS country (
             country_id INT PRIMARY KEY,
             country_name VARCHAR(63) NOT NULL
-        )
+        );
     """)
 
     ## !!!Commit the transaction to save the changes to the database!!!

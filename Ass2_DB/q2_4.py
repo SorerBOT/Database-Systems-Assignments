@@ -25,7 +25,7 @@ if __name__ == '__main__':
             release_date DATETIME,
 
             FOREIGN KEY (shoe_id) REFERENCES shoe(shoe_id)
-        )
+        );
     """)
 
     ## !!!Commit the transaction to save the changes to the database!!!
