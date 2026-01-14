@@ -1,0 +1,55 @@
+Table hospitals {
+  id INT [PRIMARY KEY]
+  name VARCHAR(31)
+}
+
+Table doctors {
+  id INT
+  hospital_id INT
+  name VARCHAR(31)
+  consultant_doctor_id INT
+  consultant_hospital_id INT
+    Indexes {
+    (id, hospital_id) [pk]
+  }
+}
+
+Table medicines {
+  id INT [PRIMARY KEY]
+  name VARCHAR(31)
+}
+
+Table diseases {
+  id INT [PRIMARY KEY]
+  name VARCHAR(31)
+  medicine_id INT
+  severity INT
+}
+
+Table patients {
+  id INT [PRIMARY KEY]
+  name VARCHAR(31)
+  height INT
+  weight INT
+  is_male BOOLEAN
+  doctor_id INT
+  hospital_id INT
+  disease_previous_id INT
+  disease_new_id INT [NOT NULL]
+}
+
+Table ratings {
+  id INT [PRIMARY KEY]
+  patient_id INT [UNIQUE]
+  rating INT
+  opinion TEXT
+}
+
+Ref: patients.hospital_id > hospitals.id
+Ref: patients.(doctor_id, hospital_id) > doctors.(id, hospital_id)
+Ref: diseases.medicine_id > medicines.id
+Ref: doctors.hospital_id > hospitals.id
+Ref: doctors.(consultant_doctor_id, consultant_hospital_id) > doctors.(id, hospital_id)
+Ref: patients.disease_previous_id > diseases.id
+Ref: patients.disease_new_id > diseases.id
+Ref: ratings.patient_id - patients.id
