@@ -1,0 +1,21 @@
+hospitals(id, name)
+doctors(id, hospital_id, name, consultant_doctor_id, consultant_hospital_id)
+medicines(id, name)
+diseases(id, name, medicine_id, severity)
+patients(id, name, height, weight, is_male, doctor_id, hospital_id, disease_previous_id, disease_new_id)
+ratings(id, patient_id, rating, opinion)
+
+
+FOREIGN KEYS
+
+doctors(hospital_id) --> hospitals(id)
+doctors((consultant_doctor_id, consultant_hospital_id)) --> doctors((id, hospital_id))
+
+diseases(medicine_id) --> medicines(id)
+
+patients(hospital_id) --> hospitals(id)
+patients((doctor_id, hospital_id)) --> doctors((id, hospital_id))
+patients(disease_previous_id) --> diseases(id)
+patients(disease_new_id) --> diseases(id)
+
+ratings(patient_id) --> patients(id)
